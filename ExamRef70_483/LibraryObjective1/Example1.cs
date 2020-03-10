@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace LibraryObjective1
 {
     // Creating a thread with the Thread class
-    public static class Example1
+    public class Example1 : IExample
     {
-        public static void ThreadMethod()
+        public void ThreadMethod()
         {
             for (int i = 0; i < 10; i++)
             {
@@ -19,7 +19,7 @@ namespace LibraryObjective1
             }
         }
 
-        public static void Example1_Main()
+        public void Example1_Main()
         {
             Thread t = new Thread(new ThreadStart(ThreadMethod));
             t.Start();
@@ -36,6 +36,8 @@ namespace LibraryObjective1
             string s = Console.ReadLine();
             if (string.IsNullOrEmpty(s)) Example1_Main();
         }
+
+        public void Example_Execute() => Example1_Main();
 
 
         // Both threads run and print their message to the console.

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace LibraryObjective1
 {
     // Using background thread
-    public static class Example2
+    public class Example2 : IExample
     {
-        public static void ThreadMethod()
+        public void ThreadMethod()
         {
             for (int i = 0; i < 10; i++)
             {
@@ -19,7 +19,7 @@ namespace LibraryObjective1
             }
         }
 
-        public static void Example2_Main()
+        public void Example2_Main()
         {
             Thread t = new Thread(new ThreadStart(ThreadMethod));
 
@@ -29,6 +29,8 @@ namespace LibraryObjective1
 
             t.Start();
         }
+
+        public void Example_Execute() => Example2_Main();
     }
 
     // _The Foreground threads can be used to keep an application alive as long as they are running,

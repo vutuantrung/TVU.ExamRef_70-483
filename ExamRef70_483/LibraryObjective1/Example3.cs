@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace LibraryObjective1
 {
     // Using the ParameterizedThreadStart
-    public static class Example3
+    public class Example3 : IExample
     {
-        public static void ThreadMethod(object o)
+        public void ThreadMethod(object o)
         {
             int num = 0;
             if (!int.TryParse(o.ToString(), out num)) throw new Exception("Invalid casting.");
@@ -26,7 +26,7 @@ namespace LibraryObjective1
             if (string.IsNullOrEmpty(s)) Example3_Main();
         }
 
-        public static void Example3_Main()
+        public void Example3_Main()
         {
             // (1)
             Thread t = new Thread(new ParameterizedThreadStart(ThreadMethod));
@@ -38,6 +38,8 @@ namespace LibraryObjective1
             t.Start(num);
             t.Join();
         }
+
+        public void Example_Execute() => Example3_Main();
     }
 
     // (1) The Thread constructor has another overload that takes an instance of a ParameterizedThreadStart delegate.
