@@ -12,7 +12,8 @@ namespace MainConsole
         static void Main(string[] args)
         {
             //Example1.Example1_Main();
-            Example2.Example2_Main();
+            //Example2.Example2_Main();
+            Example3.Example3_Main();
         }
     }
 }
