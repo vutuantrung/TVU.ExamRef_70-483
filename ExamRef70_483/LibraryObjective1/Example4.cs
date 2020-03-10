@@ -10,7 +10,7 @@ namespace LibraryObjective1
     // Stoping a thread
     public class Example4 : IExample
     {
-        public void Example4_Main()
+        public void Main()
         {
             bool stopped = false;
 
@@ -34,6 +34,6 @@ namespace LibraryObjective1
             t.Join();
         }
 
-        public void Example_Execute() => Example4_Main();
+        public void Example_Execute() => Main();
     }
 }

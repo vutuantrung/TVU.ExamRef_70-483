@@ -19,7 +19,7 @@ namespace LibraryObjective1
             }
         }
 
-        public void Example1_Main()
+        public void Main()
         {
             Thread t = new Thread(new ThreadStart(ThreadMethod));
             t.Start();
@@ -34,10 +34,10 @@ namespace LibraryObjective1
 
             // Loop method if console key tapped is empty
             string s = Console.ReadLine();
-            if (string.IsNullOrEmpty(s)) Example1_Main();
+            if (string.IsNullOrEmpty(s)) Main();
         }
 
-        public void Example_Execute() => Example1_Main();
+        public void Example_Execute() => Main();
 
 
         // Both threads run and print their message to the console.

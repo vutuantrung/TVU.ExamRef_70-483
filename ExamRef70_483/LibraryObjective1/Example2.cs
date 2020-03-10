@@ -19,7 +19,7 @@ namespace LibraryObjective1
             }
         }
 
-        public void Example2_Main()
+        public void Main()
         {
             Thread t = new Thread(new ThreadStart(ThreadMethod));
 
@@ -30,7 +30,7 @@ namespace LibraryObjective1
             t.Start();
         }
 
-        public void Example_Execute() => Example2_Main();
+        public void Example_Execute() => Main();
     }
 
     // _The Foreground threads can be used to keep an application alive as long as they are running,

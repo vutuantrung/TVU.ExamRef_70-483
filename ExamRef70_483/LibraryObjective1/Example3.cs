@@ -23,12 +23,12 @@ namespace LibraryObjective1
 
             // Loop method if console key tapped is empty
             string s = Console.ReadLine();
-            if (string.IsNullOrEmpty(s)) Example3_Main();
+            if (string.IsNullOrEmpty(s)) Main();
         }
 
-        public void Example3_Main()
+        public void Main()
         {
-            // (1)
+            // The Thread constructor has another overload that takes an instance of a ParameterizedThreadStart delegate.
             Thread t = new Thread(new ParameterizedThreadStart(ThreadMethod));
 
             Console.Write("Please enter the number: ");
@@ -39,9 +39,8 @@ namespace LibraryObjective1
             t.Join();
         }
 
-        public void Example_Execute() => Example3_Main();
+        public void Example_Execute() => Main();
     }
 
-    // (1) The Thread constructor has another overload that takes an instance of a ParameterizedThreadStart delegate.
     // This overload can be used if you want to pass some data through the start method of your thread to your worker method.
 }
