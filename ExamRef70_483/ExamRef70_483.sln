@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter3_DebugAppAndImpleme
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter4_ImplementDataAccess", "Chapter4_ImplementDataAccess", "{73C70F93-1DBA-48BF-A997-2DF183687D68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryObjective1", "LibraryObjective1\LibraryObjective1.csproj", "{A8C7F35B-9D46-43F8-89F2-695334C3B5A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,9 +25,16 @@ Global
 		{94165D0F-958D-4907-A839-EF886D72AC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94165D0F-958D-4907-A839-EF886D72AC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94165D0F-958D-4907-A839-EF886D72AC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C7F35B-9D46-43F8-89F2-695334C3B5A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C7F35B-9D46-43F8-89F2-695334C3B5A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C7F35B-9D46-43F8-89F2-695334C3B5A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C7F35B-9D46-43F8-89F2-695334C3B5A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A8C7F35B-9D46-43F8-89F2-695334C3B5A5} = {ED6EFB1B-DF22-496E-9CC5-06E19E5E39BB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CF18FAA-B0D3-42F9-AFA2-5709D939A106}
