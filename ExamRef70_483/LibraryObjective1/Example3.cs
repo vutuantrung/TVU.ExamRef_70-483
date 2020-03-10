@@ -10,7 +10,7 @@ namespace LibraryObjective1
     // Using the ParameterizedThreadStart
     public class Example3 : IExample
     {
-        public void ThreadMethod(object o)
+        private void ThreadMethod(object o)
         {
             int num = 0;
             if (!int.TryParse(o.ToString(), out num)) throw new Exception("Invalid casting.");
@@ -26,7 +26,7 @@ namespace LibraryObjective1
             if (string.IsNullOrEmpty(s)) Main();
         }
 
-        public void Main()
+        private void Main()
         {
             // The Thread constructor has another overload that takes an instance of a ParameterizedThreadStart delegate.
             Thread t = new Thread(new ParameterizedThreadStart(ThreadMethod));

@@ -10,7 +10,7 @@ namespace LibraryObjective1
     // Using background thread
     public class Example2 : IExample
     {
-        public void ThreadMethod()
+        private void ThreadMethod()
         {
             for (int i = 0; i < 10; i++)
             {
@@ -19,7 +19,7 @@ namespace LibraryObjective1
             }
         }
 
-        public void Main()
+        private void Main()
         {
             Thread t = new Thread(new ThreadStart(ThreadMethod));
 

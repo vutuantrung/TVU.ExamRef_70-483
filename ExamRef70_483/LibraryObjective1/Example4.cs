@@ -10,7 +10,7 @@ namespace LibraryObjective1
     // Stoping a thread
     public class Example4 : IExample
     {
-        public void Main()
+        private void Main()
         {
             bool stopped = false;
 
