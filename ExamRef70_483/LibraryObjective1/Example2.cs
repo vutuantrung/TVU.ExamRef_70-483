@@ -25,7 +25,7 @@ namespace LibraryObjective1
 
             // If true, the application will exits immediatly
             // If false (creating a foreground thread), the application prints the ThreadProc message 10 times
-            t.IsBackground = true;
+            t.IsBackground = false;
 
             t.Start();
         }
