@@ -11,7 +11,7 @@ namespace MainConsole
     {
         static void Main(string[] args)
         {
-            IExample example = new Example5();
+            IExample example = new Example6();
 
             example.Example_Execute();
         }
