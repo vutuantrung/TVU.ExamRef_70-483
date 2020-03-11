@@ -24,11 +24,11 @@ namespace LibraryObjective1
         {
             new Thread(() =>
             {
-                for(int i = 0; i < _field.Value; i++)
+                for (int i = 0; i < _field.Value; i++)
                 {
                     Console.WriteLine("Thread A: {0}", i);
                 }
-            });
+            }).Start();
 
             new Thread(() =>
             {
@@ -36,7 +36,9 @@ namespace LibraryObjective1
                 {
                     Console.WriteLine("Thread B: {0}", i);
                 }
-            });
+            }).Start();
+
+            Console.ReadKey();
         }
 
         public void Example_Execute() => Main();
