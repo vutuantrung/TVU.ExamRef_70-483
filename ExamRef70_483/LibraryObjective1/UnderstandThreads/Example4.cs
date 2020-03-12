@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace LibraryObjective1
+namespace LibraryObjective1.UnderstandThreads
 {
     // Stoping a thread
     public class Example4 : IExample

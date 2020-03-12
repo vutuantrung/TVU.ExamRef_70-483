@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace LibraryObjective1
+namespace LibraryObjective1.UnderstandThreads
 {
     // Creating a thread with the Thread class
     public class Example1 : IExample

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace LibraryObjective1
+namespace LibraryObjective1.UnderstandThreads
 {
     // Using ThreadLocal<T>
     public class Example6 : IExample
