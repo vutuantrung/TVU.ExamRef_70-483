@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LibraryObjective1;
+using LibraryObjective1.ThreadPools;
 
 namespace MainConsole
 {
@@ -11,7 +12,7 @@ namespace MainConsole
     {
         static void Main(string[] args)
         {
-            IExample example = new Example6();
+            IExample example = new Example1();
 
             example.Example_Execute();
         }
