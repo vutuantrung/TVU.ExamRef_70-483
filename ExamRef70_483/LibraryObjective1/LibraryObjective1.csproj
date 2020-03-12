@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ThreadPools\Example1.cs" />
     <Compile Include="UnderstandThreads\Example1.cs" />
     <Compile Include="UnderstandThreads\Example2.cs" />
     <Compile Include="UnderstandThreads\Example3.cs" />
@@ -50,5 +51,6 @@
     <Compile Include="IExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
