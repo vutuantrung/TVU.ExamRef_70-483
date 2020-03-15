@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryObjective1.UsingTasks
 {
+    // Scheduling different continuation tasks
     public class Example4 : IExample
     {
         public void Main()
