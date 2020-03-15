@@ -57,6 +57,7 @@
     <Compile Include="UsingTasks\Example5.cs" />
     <Compile Include="UsingTasks\Example6.cs" />
     <Compile Include="UsingTasks\Example7.cs" />
+    <Compile Include="UsingTasks\Example8.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
