@@ -38,9 +38,6 @@ namespace LibraryObjective1.UsingTasks
         }
 
 
-        public void Example_Execute()
-        {
-            throw new NotImplementedException();
-        }
+        public void Example_Execute() => Main();
     }
 }
