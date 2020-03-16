@@ -59,6 +59,8 @@
     <Compile Include="UsingTasks\Example7.cs" />
     <Compile Include="UsingTasks\Example8.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UsingParallelClass\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
