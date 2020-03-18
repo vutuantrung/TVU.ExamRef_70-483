@@ -50,6 +50,7 @@
     <Compile Include="UnderstandThreads\Example6.cs" />
     <Compile Include="IExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsingParallelClass\Example1.cs" />
     <Compile Include="UsingTasks\Example1.cs" />
     <Compile Include="UsingTasks\Example2.cs" />
     <Compile Include="UsingTasks\Example3.cs" />
@@ -59,8 +60,6 @@
     <Compile Include="UsingTasks\Example7.cs" />
     <Compile Include="UsingTasks\Example8.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UsingParallelClass\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
