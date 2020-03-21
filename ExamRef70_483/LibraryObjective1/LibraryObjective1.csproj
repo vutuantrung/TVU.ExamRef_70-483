@@ -61,6 +61,8 @@
     <Compile Include="UsingTasks\Example7.cs" />
     <Compile Include="UsingTasks\Example8.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UsingAsyncAndAwait\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
