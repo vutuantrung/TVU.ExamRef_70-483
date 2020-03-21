@@ -50,6 +50,8 @@
     <Compile Include="UnderstandThreads\Example6.cs" />
     <Compile Include="IExample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsingParallelClass\Example1.cs" />
+    <Compile Include="UsingParallelClass\Example2.cs" />
     <Compile Include="UsingTasks\Example1.cs" />
     <Compile Include="UsingTasks\Example2.cs" />
     <Compile Include="UsingTasks\Example3.cs" />
