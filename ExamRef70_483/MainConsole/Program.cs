@@ -10,7 +10,7 @@ namespace MainConsole
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main( string[] args )
         {
             IExample example = new Example1();
 

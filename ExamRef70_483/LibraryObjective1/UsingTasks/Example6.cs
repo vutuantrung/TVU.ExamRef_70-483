@@ -11,30 +11,29 @@ namespace LibraryObjective1.UsingTasks
     {
         public void Main()
         {
-            Task<int[]> parent = Task.Run(() =>
+            Task<int[]> parent = Task.Run( () =>
             {
-                var results = new int[3];
+                var results = new int[ 3 ];
 
-                TaskFactory tf = new TaskFactory(
-                    TaskCreationOptions.AttachedToParent,
-                    TaskContinuationOptions.ExecuteSynchronously);
+                TaskFactory tf = new TaskFactory( TaskCreationOptions.AttachedToParent,
+                                                  TaskContinuationOptions.ExecuteSynchronously );
 
                 // Compare to the previous example, creating the child tasks
                 // This proccess is easier
-                tf.StartNew(() => { results[0] = 0; });
-                tf.StartNew(() => { results[1] = 1; });
-                tf.StartNew(() => { results[2] = 2; });
+                tf.StartNew( () => { results[ 0 ] = 0; } );
+                tf.StartNew( () => { results[ 1 ] = 1; } );
+                tf.StartNew( () => { results[ 2 ] = 2; } );
 
                 return results;
-            });
+            } );
 
-            var finalTask = parent.ContinueWith(parentTask =>
+            var finalTask = parent.ContinueWith( parentTask =>
             {
-                foreach (int i in parentTask.Result)
+                foreach ( int i in parentTask.Result )
                 {
-                    Console.WriteLine(i);
+                    Console.WriteLine( i );
                 }
-            });
+            } );
 
             finalTask.Wait();
         }

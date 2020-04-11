@@ -12,16 +12,16 @@ namespace LibraryObjective1.UsingParallelClass
     {
         public void Main()
         {
-            Parallel.For(0, 10, (i) =>
+            Parallel.For( 0, 10, ( i ) =>
             {
-                Thread.Sleep(1000);
-            });
+                Thread.Sleep( 1000 );
+            } );
 
-            var numbers = Enumerable.Range(0, 10);
-            Parallel.ForEach(numbers, (i) =>
+            var numbers = Enumerable.Range( 0, 10 );
+            Parallel.ForEach( numbers, ( i ) =>
             {
-                Thread.Sleep(1000);
-            });
+                Thread.Sleep( 1000 );
+            } );
         }
 
         public void Example_Execute() => Main();

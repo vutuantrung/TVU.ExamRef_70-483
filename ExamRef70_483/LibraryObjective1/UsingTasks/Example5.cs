@@ -11,36 +11,36 @@ namespace LibraryObjective1.UsingTasks
     {
         public void Main()
         {
-            Task<int[]> parent = Task.Run(() =>
+            Task<int[]> parent = Task.Run( () =>
             {
-                int[] results = new int[3];
+                int[] results = new int[ 3 ];
                 // First task
-                new Task(() =>
+                new Task( () =>
                 {
-                    results[0] = 0;
-                }, TaskCreationOptions.AttachedToParent).Start();
+                    results[ 0 ] = 0;
+                }, TaskCreationOptions.AttachedToParent ).Start();
                 // Second task
-                new Task(() =>
+                new Task( () =>
                 {
-                    results[1] = 1;
-                }, TaskCreationOptions.AttachedToParent).Start();
+                    results[ 1 ] = 1;
+                }, TaskCreationOptions.AttachedToParent ).Start();
 
                 // Third task
-                new Task(() =>
+                new Task( () =>
                 {
-                    results[2] = 2;
-                }, TaskCreationOptions.AttachedToParent).Start();
+                    results[ 2 ] = 2;
+                }, TaskCreationOptions.AttachedToParent ).Start();
 
                 return results;
-            });
+            } );
 
-            var finalTask = parent.ContinueWith((parentTask) =>
+            var finalTask = parent.ContinueWith( ( parentTask ) =>
             {
-                foreach(int i in parentTask.Result)
+                foreach ( int i in parentTask.Result )
                 {
-                    Console.WriteLine(i);
+                    Console.WriteLine( i );
                 }
-            });
+            } );
 
             finalTask.Wait();
         }

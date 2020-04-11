@@ -13,30 +13,30 @@ namespace LibraryObjective1.UnderstandThreads
         // This class allow us to declare a variable which is not shared between threads
         // and one of his capabilities that we can initialize each instance of the variable as the class the supplied factory method to create and/or initialized value to be returned.
         // Also, unlike ThreadStatic which is only works on static fields, ThreadLocal can be applied to static or instance variables.
-        public static ThreadLocal<int> _field = new ThreadLocal<int>(() =>
+        public static ThreadLocal<int> _field = new ThreadLocal<int>( () =>
         {
-            // This is a very useful tool because by asking this class,
-            // we can observe the current thread: its information, its state...
-            return Thread.CurrentThread.ManagedThreadId;
-        });
+        // This is a very useful tool because by asking this class,
+        // we can observe the current thread: its information, its state...
+        return Thread.CurrentThread.ManagedThreadId;
+        } );
 
         public void Main()
         {
-            new Thread(() =>
+            new Thread( () =>
             {
-                for (int i = 0; i < _field.Value; i++)
+                for ( int i = 0; i < _field.Value; i++ )
                 {
-                    Console.WriteLine("Thread A: {0}", i);
+                    Console.WriteLine( "Thread A: {0}", i );
                 }
-            }).Start();
+            } ).Start();
 
-            new Thread(() =>
+            new Thread( () =>
             {
-                for (int i = 0; i < _field.Value; i++)
+                for ( int i = 0; i < _field.Value; i++ )
                 {
-                    Console.WriteLine("Thread B: {0}", i);
+                    Console.WriteLine( "Thread B: {0}", i );
                 }
-            }).Start();
+            } ).Start();
 
             Console.ReadKey();
         }

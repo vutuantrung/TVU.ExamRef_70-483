@@ -11,13 +11,13 @@ namespace LibraryObjective1.UsingTasks
     {
         public void Main()
         {
-            Task t = Task.Run(() =>
+            Task t = Task.Run( () =>
             {
-                for(int i = 0; i < 100; i++)
+                for ( int i = 0; i < 100; i++ )
                 {
-                    Console.Write('*');
+                    Console.Write( '*' );
                 }
-            });
+            } );
 
             t.Wait();
         }

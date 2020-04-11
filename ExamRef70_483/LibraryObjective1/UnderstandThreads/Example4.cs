@@ -15,19 +15,19 @@ namespace LibraryObjective1.UnderstandThreads
             bool stopped = false;
 
             // The thread is initialized with a lambda expression
-            Thread t = new Thread(new ThreadStart(() =>
+            Thread t = new Thread( new ThreadStart( () =>
             {
                 // this thread check variable stopped value to decide stopping or not
-                while (!stopped)
+                while ( !stopped )
                 {
-                    Console.WriteLine("Running...");
-                    Thread.Sleep(1000);
+                    Console.WriteLine( "Running..." );
+                    Thread.Sleep( 1000 );
                 }
 
-            }));
+            } ) );
 
             t.Start();
-            Console.WriteLine("Press any key to exit.");
+            Console.WriteLine( "Press any key to exit." );
             Console.ReadKey();
 
             stopped = true;

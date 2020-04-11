@@ -12,21 +12,21 @@ namespace LibraryObjective1.UnderstandThreads
     {
         private void ThreadMethod()
         {
-            for (int i = 0; i < 10; i++)
+            for ( int i = 0; i < 10; i++ )
             {
-                Console.WriteLine("ThreadProc: {0}", i);
-                Thread.Sleep(0);
+                Console.WriteLine( "ThreadProc: {0}", i );
+                Thread.Sleep( 0 );
             }
         }
 
         private void Main()
         {
-            Thread t = new Thread(new ThreadStart(ThreadMethod));
+            Thread t = new Thread( new ThreadStart( ThreadMethod ) );
             t.Start();
-            for (int i = 0; i < 4; i++)
+            for ( int i = 0; i < 4; i++ )
             {
-                Console.WriteLine("Main thread: Do some work.");
-                Thread.Sleep(0);
+                Console.WriteLine( "Main thread: Do some work." );
+                Thread.Sleep( 0 );
             }
 
             // This is called on the main thread to let it wait until the other thread finishes.
@@ -34,7 +34,7 @@ namespace LibraryObjective1.UnderstandThreads
 
             // Loop method if console key tapped is empty
             string s = Console.ReadLine();
-            if (string.IsNullOrEmpty(s)) Main();
+            if ( string.IsNullOrEmpty( s ) ) Main();
         }
 
         public void Example_Execute() => Main();

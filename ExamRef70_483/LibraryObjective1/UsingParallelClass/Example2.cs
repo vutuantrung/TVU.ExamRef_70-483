@@ -11,14 +11,14 @@ namespace LibraryObjective1.UsingParallelClass
     {
         public void Main()
         {
-            var result = Parallel.For(0, 1000, (int i, ParallelLoopState loopState) =>
+            var result = Parallel.For( 0, 1000, ( int i, ParallelLoopState loopState ) =>
             {
-                if (i == 500)
+                if ( i == 500 )
                 {
-                    Console.WriteLine($"Breaking loop at { loopState.LowestBreakIteration }.");
+                    Console.WriteLine( $"Breaking loop at { loopState.LowestBreakIteration }." );
                     loopState.Break();
                 }
-            });
+            } );
         }
 
         public void Example_Execute() => Main();

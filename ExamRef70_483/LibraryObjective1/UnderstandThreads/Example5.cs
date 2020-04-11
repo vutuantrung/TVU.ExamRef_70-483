@@ -17,28 +17,28 @@ namespace LibraryObjective1.UnderstandThreads
 
         private void Main()
         {
-            new Thread(() =>
+            new Thread( () =>
             {
-                for (int i = 0; i < 10; i++)
+                for ( int i = 0; i < 10; i++ )
                 {
                     _field++;
-                    Console.WriteLine("Thread A: {0}", _field);
+                    Console.WriteLine( "Thread A: {0}", _field );
                 }
-            }).Start();
+            } ).Start();
 
-            new Thread(() =>
+            new Thread( () =>
             {
-                for (int i = 0; i < 10; i++)
+                for ( int i = 0; i < 10; i++ )
                 {
                     _field++;
-                    Console.WriteLine("Thread B: {0}", _field);
+                    Console.WriteLine( "Thread B: {0}", _field );
                 }
-            }).Start();
+            } ).Start();
 
 
             // Loop method if console key tapped is empty
             string s = Console.ReadLine();
-            if (string.IsNullOrEmpty(s)) Main();
+            if ( string.IsNullOrEmpty( s ) ) Main();
         }
 
         public void Example_Execute() => Main();

@@ -14,29 +14,29 @@ namespace LibraryObjective1.UsingTasks
         {
             Task[] tasks = new Task[3];
 
-            tasks[0] = Task.Run(() =>
+            tasks[0] = Task.Run( () =>
             {
-                Thread.Sleep(1000);
-                Console.WriteLine("1");
+                Thread.Sleep( 1000 );
+                Console.WriteLine( "1" );
                 return 1;
-            });
+            } );
 
-            tasks[1] = Task.Run(() =>
+            tasks[1] = Task.Run( () =>
             {
-                Thread.Sleep(1000);
-                Console.WriteLine("2");
+                Thread.Sleep( 1000 );
+                Console.WriteLine( "2" );
                 return 2;
-            });
+            } );
 
-            tasks[2] = Task.Run(() =>
+            tasks[2] = Task.Run( () =>
             {
-                Thread.Sleep(1000);
-                Console.WriteLine("3");
+                Thread.Sleep( 1000 );
+                Console.WriteLine( "3" );
                 return 3;
-            });
+            } );
 
             // This code will make process wait all task finish their job
-            Task.WaitAll(tasks);
+            Task.WaitAll( tasks );
         }
 
 

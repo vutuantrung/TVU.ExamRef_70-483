@@ -11,28 +11,28 @@ namespace LibraryObjective1.UsingTasks
     {
         public void Main()
         {
-            Task<int> t = Task.Run(() =>
+            Task<int> t = Task.Run( () =>
             {
                 return 42;
-            });
+            } );
 
             // The overload when the task is canceled.
-            t.ContinueWith((prevTask) =>
+            t.ContinueWith( ( prevTask ) =>
             {
-                Console.WriteLine("Canceled.");
-            }, TaskContinuationOptions.OnlyOnCanceled);
+                Console.WriteLine( "Canceled." );
+            }, TaskContinuationOptions.OnlyOnCanceled );
 
             // The overload when an exeption happens
-            t.ContinueWith((prevTask) =>
+            t.ContinueWith( ( prevTask ) =>
             {
-                Console.WriteLine("Faulted.");
-            }, TaskContinuationOptions.OnlyOnFaulted);
+                Console.WriteLine( "Faulted." );
+            }, TaskContinuationOptions.OnlyOnFaulted );
 
             // The overload when the task completes succesfully.
-            var completedTask = t.ContinueWith((prevTask) =>
+            var completedTask = t.ContinueWith( ( prevTask ) =>
             {
-                Console.WriteLine("Completed.");
-            }, TaskContinuationOptions.OnlyOnRanToCompletion);
+                Console.WriteLine( "Completed." );
+            }, TaskContinuationOptions.OnlyOnRanToCompletion );
 
             completedTask.Wait();
         }

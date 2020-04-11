@@ -9,12 +9,12 @@ namespace LibraryObjective1.ThreadPools
 {
     public class Example1 : IExample
     {
-        public void ThreadProc(object data)
+        public void ThreadProc( object data )
         {
-            for (int i = 0; i < 10; i++)
+            for ( int i = 0; i < 10; i++ )
             {
-                Console.WriteLine("Thread callback: {0}", data);
-                Thread.Sleep(1000);
+                Console.WriteLine( "Thread callback: {0}", data );
+                Thread.Sleep( 1000 );
             }
         }
 
@@ -24,10 +24,10 @@ namespace LibraryObjective1.ThreadPools
             int workerThread;
             // The maximum number of asynchronous I/O threads in the thread pool.
             int completionPortThread;
-            ThreadPool.GetMaxThreads(out workerThread, out completionPortThread);
+            ThreadPool.GetMaxThreads( out workerThread, out completionPortThread );
 
-            ThreadPool.QueueUserWorkItem(ThreadProc);
-            ThreadPool.QueueUserWorkItem(ThreadProc, "this is a testing message");
+            ThreadPool.QueueUserWorkItem( ThreadProc );
+            ThreadPool.QueueUserWorkItem( ThreadProc, "this is a testing message" );
         }
 
         public void Example_Execute() => Main();

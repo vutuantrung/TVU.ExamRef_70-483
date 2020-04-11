@@ -11,15 +11,15 @@ namespace LibraryObjective1.UsingTasks
     {
         public void Main()
         {
-            Task<int> t = Task.Run(() =>
+            Task<int> t = Task.Run( () =>
             {
                 return 42;
-            }).ContinueWith((prevTask) =>
+            } ).ContinueWith( ( prevTask ) =>
             {
                 return prevTask.Result * 2;
-            });
+            } );
 
-            Console.WriteLine(t.Result);
+            Console.WriteLine( t.Result );
         }
 
 

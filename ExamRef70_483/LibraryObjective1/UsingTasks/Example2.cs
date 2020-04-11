@@ -11,16 +11,16 @@ namespace LibraryObjective1.UsingTasks
     {
         public void Main()
         {
-            Task<int> t = Task.Run(() =>
+            Task<int> t = Task.Run( () =>
             {
                 return 42;
-            });
+            } );
 
             // Attempting to read the Result property on a Task will force the thread that's trying to read the result to wait until the Task is finished before continuing.
             // As long as the task is not finished, it is impossible to give the result.
             // If the Task is not finished, this will block the current thread.
             // So, no need to call Wait in this case.
-            Console.WriteLine(t.Result);
+            Console.WriteLine( t.Result );
         }
 
 
